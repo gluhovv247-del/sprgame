@@ -15,7 +15,7 @@ public class Dabgues : MonoBehaviour
     private TextMeshProUGUI _dialogueText;
     private TextMeshProUGUI _nameText;
 
-    private GameObject _choiceButtonsPanel;
+    [HideInInspector]public GameObject _choiceButtonsPanel;
     private GameObject _choiceButton;
     private List<TextMeshProUGUI> _choiceText = new(); // Исправлено имя переменной
 

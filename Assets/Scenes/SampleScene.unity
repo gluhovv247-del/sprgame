@@ -790,6 +790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inkJson: {fileID: 0}
+  _choiceButtonsPanel: {fileID: 0}
 --- !u!1 &1819894535
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,6 +913,7 @@ GameObject:
   - component: {fileID: 2147275066}
   - component: {fileID: 2147275068}
   - component: {fileID: 2147275067}
+  - component: {fileID: 2147275069}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -979,6 +981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inkJson: {fileID: 0}
+  _choiceButtonsPanel: {fileID: 0}
 --- !u!114 &2147275067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,6 +1014,18 @@ MonoBehaviour:
   choiceButtonsPanel: {fileID: 325419792}
   choiceButton: {fileID: 2835253928396985207, guid: 66382b212f189a84e8f02a3e059544ff,
     type: 3}
+--- !u!114 &2147275069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147275063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0012e7a2aaaa5dc42a0c3598a7aa68b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6380177294744133869
 PrefabInstance:
   m_ObjectHideFlags: 0
