@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.254717, g: 0.1787825, b: 0.1787825, a: 0.9843137}
+  m_Color: {r: 0.01886791, g: 0.01886791, b: 0.01886791, a: 0.9843137}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -867,6 +867,7 @@ MonoBehaviour:
   smena:
   - {fileID: 21300000, guid: 111510f7a22e88547964d57a015dd5ba, type: 3}
   - {fileID: 21300000, guid: ff6f49276931c3c4394872ef9c9d1b17, type: 3}
+  - {fileID: 21300000, guid: e5f549b849aad8e489a289aee96069ec, type: 3}
 --- !u!114 &1605387567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,12 +1183,12 @@ PrefabInstance:
     - target: {fileID: 2138208306711990704, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 298.911
+      value: 404.0801
       objectReference: {fileID: 0}
     - target: {fileID: 2138208306711990704, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 82.092
+      value: 128.8338
       objectReference: {fileID: 0}
     - target: {fileID: 2138208306711990704, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
@@ -1257,12 +1258,12 @@ PrefabInstance:
     - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
       propertyPath: m_fontSize
-      value: 24
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
       propertyPath: m_margin.w
-      value: -40.887306
+      value: -64.25812
       objectReference: {fileID: 0}
     - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
@@ -1272,12 +1273,12 @@ PrefabInstance:
     - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
       propertyPath: m_margin.y
-      value: -40.08185
+      value: -61.11563
       objectReference: {fileID: 0}
     - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
       propertyPath: m_margin.z
-      value: 102.79534
+      value: -2.373619
       objectReference: {fileID: 0}
     - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
@@ -1293,6 +1294,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor.r
       value: 0.7830189
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}

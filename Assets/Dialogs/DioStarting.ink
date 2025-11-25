@@ -11,6 +11,9 @@ VAR fon = 0
 (голос с кухни)*
 ~characterName = "Мама"
 -Сынок, туда едет 78 маршрутка... А тебе зачем?
+~fon=2
+~characterName = ""
+#THE78
 -> END
 
 

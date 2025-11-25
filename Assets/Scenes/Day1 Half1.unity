@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1509434, g: 0.10736917, b: 0.10736917, a: 0.18431373}
+  m_Color: {r: 0.18155926, g: 0.2663627, b: 0.754717, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.254717, g: 0.1787825, b: 0.1787825, a: 0.9843137}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.9843137}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -865,8 +865,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smena:
-  - {fileID: 21300000, guid: 111510f7a22e88547964d57a015dd5ba, type: 3}
-  - {fileID: 21300000, guid: ff6f49276931c3c4394872ef9c9d1b17, type: 3}
+  - {fileID: 21300000, guid: a7a4d894297df2047bfce6d58e200533, type: 3}
+  - {fileID: 21300000, guid: e014712de2a989140808f9204d7202ab, type: 3}
+  - {fileID: 21300000, guid: 2b693a198ef3eb04b8e40cd8c4841d04, type: 3}
+  - {fileID: 21300000, guid: a4e9d30e81641bd46b350f35d0f9cad3, type: 3}
+  - {fileID: 21300000, guid: 6155206618a4b964093961b5d1315c6f, type: 3}
+  - {fileID: 21300000, guid: 9b30a2578c4dd914593e9ab99e97e275, type: 3}
+  - {fileID: 21300000, guid: aab9d339fd24b9440befc763a63618fb, type: 3}
+  - {fileID: 21300000, guid: db09583222a04fe49bb9e8c8c1bd46e6, type: 3}
+  - {fileID: 21300000, guid: 80ef8a58076c9ce4a8191030d305af01, type: 3}
+  - {fileID: 21300000, guid: 7b07d755ba895a84a99c94acaf2e97fd, type: 3}
+  - {fileID: 21300000, guid: f521105aa0d4fda4daece081a188ff53, type: 3}
+  - {fileID: 21300000, guid: 5349914a0cdfbe449b9a038ba4ee4e38, type: 3}
+  - {fileID: 21300000, guid: 480a9f3865790ef4caf25af28779530b, type: 3}
+  - {fileID: 21300000, guid: abbca9038d19b8f419e1ab088d7657b0, type: 3}
+  - {fileID: 21300000, guid: 4f59e337311fa2143b1663a9eabd69a5, type: 3}
+  - {fileID: 21300000, guid: 6330b9f7f20ec03439bbd1268423d2b7, type: 3}
+  - {fileID: 21300000, guid: e42302f4defdfef4f8167e0bcc3a8a1d, type: 3}
 --- !u!114 &1605387567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,12 +1197,12 @@ PrefabInstance:
     - target: {fileID: 2138208306711990704, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 298.911
+      value: 490.5524
       objectReference: {fileID: 0}
     - target: {fileID: 2138208306711990704, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 82.092
+      value: 152.2046
       objectReference: {fileID: 0}
     - target: {fileID: 2138208306711990704, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
@@ -1257,12 +1272,12 @@ PrefabInstance:
     - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
       propertyPath: m_fontSize
-      value: 24
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
       propertyPath: m_margin.w
-      value: -40.887306
+      value: -75.94353
       objectReference: {fileID: 0}
     - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
@@ -1272,12 +1287,23 @@ PrefabInstance:
     - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
       propertyPath: m_margin.y
-      value: -40.08185
+      value: -75.138245
       objectReference: {fileID: 0}
     - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
       propertyPath: m_margin.z
-      value: 102.79534
+      value: -93.52024
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d192294592c6de439e8722da614a6d0,
+        type: 2}
+    - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
@@ -1296,6 +1322,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4422581791606920520, guid: 7d192294592c6de439e8722da614a6d0,
+        type: 2}
+    - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
+        type: 3}
       propertyPath: m_verticalMapping
       value: 0
       objectReference: {fileID: 0}
@@ -1309,20 +1346,25 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4291348680
       objectReference: {fileID: 0}
+    - target: {fileID: 3263448478101682788, guid: 66382b212f189a84e8f02a3e059544ff,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5494944173483767989, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.2177999
+      value: 0.7264151
       objectReference: {fileID: 0}
     - target: {fileID: 5494944173483767989, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.2177999
+      value: 0.084146924
       objectReference: {fileID: 0}
     - target: {fileID: 5494944173483767989, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.26415092
+      value: 0.07195621
       objectReference: {fileID: 0}
     - target: {fileID: 7521627504084292543, guid: 66382b212f189a84e8f02a3e059544ff,
         type: 3}
