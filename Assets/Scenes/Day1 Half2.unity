@@ -865,24 +865,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smena:
-  - {fileID: 21300000, guid: a7a4d894297df2047bfce6d58e200533, type: 3}
-  - {fileID: 21300000, guid: e014712de2a989140808f9204d7202ab, type: 3}
-  - {fileID: 21300000, guid: 2b693a198ef3eb04b8e40cd8c4841d04, type: 3}
-  - {fileID: 21300000, guid: a4e9d30e81641bd46b350f35d0f9cad3, type: 3}
-  - {fileID: 21300000, guid: 6155206618a4b964093961b5d1315c6f, type: 3}
-  - {fileID: 21300000, guid: 9b30a2578c4dd914593e9ab99e97e275, type: 3}
-  - {fileID: 21300000, guid: aab9d339fd24b9440befc763a63618fb, type: 3}
-  - {fileID: 21300000, guid: db09583222a04fe49bb9e8c8c1bd46e6, type: 3}
-  - {fileID: 21300000, guid: 80ef8a58076c9ce4a8191030d305af01, type: 3}
-  - {fileID: 21300000, guid: 7b07d755ba895a84a99c94acaf2e97fd, type: 3}
-  - {fileID: 21300000, guid: f521105aa0d4fda4daece081a188ff53, type: 3}
-  - {fileID: 21300000, guid: 5349914a0cdfbe449b9a038ba4ee4e38, type: 3}
-  - {fileID: 21300000, guid: 480a9f3865790ef4caf25af28779530b, type: 3}
-  - {fileID: 21300000, guid: abbca9038d19b8f419e1ab088d7657b0, type: 3}
-  - {fileID: 21300000, guid: 4f59e337311fa2143b1663a9eabd69a5, type: 3}
-  - {fileID: 21300000, guid: 6330b9f7f20ec03439bbd1268423d2b7, type: 3}
-  - {fileID: 21300000, guid: e42302f4defdfef4f8167e0bcc3a8a1d, type: 3}
-  - {fileID: 21300000, guid: 8052e99b1a37d7549b570ec255807fec, type: 3}
+  - {fileID: 21300000, guid: 18302d9711b798840b178c20b8d9ac75, type: 3}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: ba4ff58cdf984514e9d90bcf455788f2, type: 3}
+  - {fileID: 21300000, guid: a4a94b9bf4913154584824e8f674e48e, type: 3}
+  - {fileID: 21300000, guid: e0a07e20885ddc744ada52ceb8da6c39, type: 3}
+  - {fileID: 21300000, guid: 111510f7a22e88547964d57a015dd5ba, type: 3}
 --- !u!114 &1605387567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1111,7 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a8e2873f6dfe640be76c37d19aae3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inkJson: {fileID: 4900000, guid: 69e65e197b95f904c8c5d4fd7fc80a8d, type: 3}
+  _inkJson: {fileID: 4900000, guid: 6f911e9f8aafd774f95e0dfb6e7f06e3, type: 3}
   _choiceButtonsPanel: {fileID: 0}
 --- !u!114 &2147275067
 MonoBehaviour:
@@ -1138,7 +1126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d662617aa094674c99caf4b5644fd72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJson: {fileID: 4900000, guid: 69e65e197b95f904c8c5d4fd7fc80a8d, type: 3}
+  inkJson: {fileID: 4900000, guid: 6f911e9f8aafd774f95e0dfb6e7f06e3, type: 3}
   dialoguePanel: {fileID: 869387421}
   dialogueText: {fileID: 1493939632}
   nameText: {fileID: 621558046}
