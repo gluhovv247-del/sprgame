@@ -53,7 +53,25 @@ public class Dabgues : MonoBehaviour
         _dialoguePanel.SetActive(true);
         ContinueStory();
     }
-
+    private void CheckTagsAndHandle()
+    {
+        var tags = _currentStory.currentTags;
+        if (tags != null && tags.Contains("GAME_OVER"))
+        {
+            // например: перейти на сцену
+            SceneManager.LoadScene("GameOver");
+            // или вызвать ваш менеджер перехода:
+            // GameOverManager.Instance.ShowGameOver();
+        }
+        if (tags != null && tags.Contains("THE78"))
+        {
+            // например: перейти на сцену
+            SceneManager.LoadScene("The 78");
+            // или вызвать ваш менеджер перехода:
+            // GameOverManager.Instance.ShowGameOver();
+        }
+        
+    }
     public void ContinueStory(bool choiceBefore = false)
     {
         if (_currentStory == null) return;
@@ -67,6 +85,7 @@ public class Dabgues : MonoBehaviour
         {
             ExitDialogue();
         }
+        CheckTagsAndHandle();
     }
 
     private void ShowDialogue()
@@ -141,12 +160,12 @@ public class Dabgues : MonoBehaviour
         ContinueStory(true);
     }
 
-    private void ExitDialogue()
+    public void ExitDialogue()
     {
         DialogPlay = false;
         _dialoguePanel.SetActive(false);
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        if (nextSceneIndex <= SceneManager.sceneCount)
+        if (nextSceneIndex <= SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(nextSceneIndex);
         }
