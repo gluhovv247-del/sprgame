@@ -160,12 +160,12 @@ public class Dabgues : MonoBehaviour
         ContinueStory(true);
     }
 
-    private void ExitDialogue()
+    public void ExitDialogue()
     {
         DialogPlay = false;
         _dialoguePanel.SetActive(false);
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        if (nextSceneIndex <= SceneManager.sceneCount)
+        if (nextSceneIndex <= SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(nextSceneIndex);
         }

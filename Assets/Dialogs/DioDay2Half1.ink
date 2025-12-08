@@ -100,9 +100,7 @@ VAR fon = 0
 -Нет... 
 -Что я наделал?
 -Я променял мечту на сиюминутные деньги...
-~characterName = ""
-~fon=11
-(Путь жадности)
+#GAME_OVER
 ->END
 ===no===
 ~characterName = "ГГ"
@@ -224,5 +222,4 @@ VAR fon = 0
 ~characterName = ""
 ~fon=20
 (Конец 1 половины дня)
-
 ->END

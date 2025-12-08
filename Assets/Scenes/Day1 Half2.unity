@@ -866,11 +866,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smena:
   - {fileID: 21300000, guid: 18302d9711b798840b178c20b8d9ac75, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 6e98b67101ef8f14ead54befc0d789f9, type: 3}
   - {fileID: 21300000, guid: ba4ff58cdf984514e9d90bcf455788f2, type: 3}
   - {fileID: 21300000, guid: a4a94b9bf4913154584824e8f674e48e, type: 3}
   - {fileID: 21300000, guid: e0a07e20885ddc744ada52ceb8da6c39, type: 3}
   - {fileID: 21300000, guid: 111510f7a22e88547964d57a015dd5ba, type: 3}
+  - {fileID: 21300000, guid: 6141cdb07db9603429cca15fca738285, type: 3}
 --- !u!114 &1605387567
 MonoBehaviour:
   m_ObjectHideFlags: 0
