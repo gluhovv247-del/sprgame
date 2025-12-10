@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InputReader : MonoBehaviour, Controls.IDialogueActions
 {
@@ -29,4 +31,15 @@ public class InputReader : MonoBehaviour, Controls.IDialogueActions
             _dialogues.ContinueStory(_dialogues._choiceButtonsPanel.activeInHierarchy);
         }
     }
+    public Text uiText;
+    public float typingSpeed = 0.1f;
+    public GameObject nextButton;
+
+    private string fulltext;
+    private bool isTyping;
+    private bool isCorroutineStopped = false;
 }
+
+ 
+
+

@@ -812,8 +812,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a8e2873f6dfe640be76c37d19aae3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inkJson: {fileID: 0}
+  typingSpeed: 0.04
+  _inkJson: {fileID: 4900000, guid: 134446a5af60810478d92df815da4468, type: 3}
   _choiceButtonsPanel: {fileID: 0}
+  nextButton: {fileID: 1493939630}
 --- !u!1 &1605387564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,8 +1098,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a8e2873f6dfe640be76c37d19aae3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typingSpeed: 0.04
   _inkJson: {fileID: 0}
   _choiceButtonsPanel: {fileID: 0}
+  nextButton: {fileID: 0}
 --- !u!114 &2147275067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,6 +1146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0012e7a2aaaa5dc42a0c3598a7aa68b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiText: {fileID: 0}
+  typingSpeed: 0.1
+  nextButton: {fileID: 0}
 --- !u!1001 &6380177294744133869
 PrefabInstance:
   m_ObjectHideFlags: 0
