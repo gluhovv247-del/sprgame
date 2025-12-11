@@ -11,6 +11,7 @@ using System.Collections;
 public class Dabgues : MonoBehaviour
 {
     private Story _currentStory;
+    private bool isDisplaying = false;
     public float typingSpeed = 0.04f;
     [SerializeField] private TextAsset _inkJson;
     private string fulltext;
@@ -93,7 +94,7 @@ public class Dabgues : MonoBehaviour
         }
         CheckTagsAndHandle();
     }
-    private IEnumerator Dysplayline(string line)
+    /*private IEnumerator Dysplayline(string line)
     {
 
         _dialogueText.text = "";
@@ -102,23 +103,26 @@ public class Dabgues : MonoBehaviour
             _dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed / 5);
         }
-    }
+        isDisplaying = false;
+    }*/
     private void ShowDialogue()
     {
-        // Если нужно читать несколько строк подряд, можно заменить на цикл while (story.canContinue) { ... }
-        if (displayLineCoroutine != null)
+        //для печати текста комментируем 111 строку и раскомменчиваем  все что сейчас закомментировано в строках: 97-107, 113-121
+
+        _dialogueText.text = _currentStory.Continue();
+        /*if (_currentStory.canContinue)
         {
-            StopCoroutine(displayLineCoroutine);
-        }
-        /*StopCoroutine(displayLineCoroutine);*/
-        displayLineCoroutine = StartCoroutine(Dysplayline(_currentStory.Continue()));
-
-
+            isDisplaying = true;
+            if (displayLineCoroutine != null)
+            {
+                StopCoroutine(displayLineCoroutine);
+            }
+            displayLineCoroutine = StartCoroutine(Dysplayline(_currentStory.Continue()));
+        }*/
         _nameText.text = _currentStory.variablesState["characterName"]?.ToString() ?? "";
         _smenafona?.changeImage((int)_currentStory.variablesState["fon"]);
     }
-
-    private void ShowChoiceButtons()
+        private void ShowChoiceButtons()
     {
         List<Choice> currentChoices = _currentStory.currentChoices;
         _choiceButtonsPanel.SetActive(currentChoices.Count != 0);
