@@ -31,9 +31,9 @@ public class Dabgues : MonoBehaviour
     private bool canContinueToNextLine = false;
 
     // История для возврата назад
-    private List<string> _historyStates = new List<string>();
-    private List<string> _historyTexts = new List<string>(); // Храним текст отдельно
-    private int _currentHistoryIndex = -1;
+    private List<string> _history = new();
+    private List<string> _historyTexts = new List<string>();
+    private int _historyIndex = -1;
 
     [Inject]
     public void Construct(DialoguesInstaller dialoguesInstaller)
@@ -58,7 +58,6 @@ public class Dabgues : MonoBehaviour
             _smenafona = fon;
 
         // Сохраняем начальное состояние перед началом диалога
-        SaveCurrentState("", true);
 
         StartDialogue();
 
@@ -83,69 +82,41 @@ public class Dabgues : MonoBehaviour
     }
 
     // Сохраняем текущее состояние в историю
-    private void SaveCurrentState(string currentText, bool isInitial = false)
+    private void SaveState(string currentText)
     {
-        if (_currentStory != null)
-        {
-            // Сохраняем JSON состояние истории
-            string jsonState = _currentStory.state.ToJson();
+        if (_currentStory == null) return;
 
-            // Если это не начальное состояние, удаляем все состояния после текущего
-            if (!isInitial && _currentHistoryIndex < _historyStates.Count - 1)
-            {
-                int itemsToRemove = _historyStates.Count - (_currentHistoryIndex + 1);
-                _historyStates.RemoveRange(_currentHistoryIndex + 1, itemsToRemove);
-                _historyTexts.RemoveRange(_currentHistoryIndex + 1, itemsToRemove);
-            }
+        if (_historyIndex < _history.Count - 1)
+            _history.RemoveRange(_historyIndex + 1, _history.Count - _historyIndex - 1);
+            _historyTexts.RemoveRange(_historyIndex + 1, _history.Count - _historyIndex - 1);
 
-            // Добавляем новое состояние
-            _historyStates.Add(jsonState);
-            _historyTexts.Add(currentText);
-            _currentHistoryIndex = _historyStates.Count - 1;
+        _history.Add(_currentStory.state.ToJson());
+        _historyTexts.Add(currentText);
+        _historyIndex = _history.Count - 1;
 
-            UpdateBackButton();
-        }
+        UpdateBackButton();
+    }
+    private void LoadState(string json)
+    {
+        _currentStory.state.LoadJson(json);
+
+        _dialogueText.text = _historyTexts[_historyIndex]; // Ink сам вернёт нужную строку
+        UpdateNameAndBackground();
+        ShowChoiceButtons();
+
+        UpdateBackButton();
     }
 
     // Возврат к предыдущему состоянию
     public void GoBack()
     {
-        // Нельзя вернуться назад, если мы в самом начале
-        if (_currentHistoryIndex <= 0) return;
+        if (_historyIndex <= 0) return;
 
-        // Переходим к предыдущему состоянию
-        _currentHistoryIndex--;
-
-        // Восстанавливаем состояние из истории
-        LoadStateFromHistory(_currentHistoryIndex);
-
-        UpdateBackButton();
+        _historyIndex--;
+        LoadState(_history[_historyIndex]);
     }
 
     // Загружаем состояние из истории
-    private void LoadStateFromHistory(int historyIndex)
-    {
-        if (historyIndex < 0 || historyIndex >= _historyStates.Count) return;
-
-        // Создаем новую историю с сохраненным состоянием
-        _currentStory = new Story(_inkJson.text);
-        _currentStory.state.LoadJson(_historyStates[historyIndex]);
-
-        // Обновляем UI с сохраненным текстом
-        RefreshUI(historyIndex);
-    }
-
-    private void RefreshUI(int historyIndex)
-    {
-        // Показываем сохраненный текст
-        _dialogueText.text = _historyTexts[historyIndex];
-
-        // Обновляем имя персонажа
-        UpdateNameAndBackground();
-
-        // Показываем кнопки выбора, если они есть
-        ShowChoiceButtons();
-    }
 
     private void UpdateNameAndBackground()
     {
@@ -166,7 +137,7 @@ public class Dabgues : MonoBehaviour
 
     private void UpdateBackButton()
     {
-        bool canGoBack = _currentHistoryIndex > 0;
+        bool canGoBack = _historyIndex > 0;
 
         if (backButton != null)
         {
@@ -201,14 +172,12 @@ public class Dabgues : MonoBehaviour
 
         if (_currentStory.canContinue)
         {
-            // Получаем текст ДО сохранения состояния
-            string nextLine = _currentStory.Continue();
+             // 🔴 ВАЖНО: ДО Continue
 
-            // Сохраняем состояние С текстом текущей строки
-            SaveCurrentState(nextLine);
+            string line = _currentStory.Continue();
+            SaveState(line);
+            _dialogueText.text = line;
 
-            // Показываем диалог
-            _dialogueText.text = nextLine;
             UpdateNameAndBackground();
             ShowChoiceButtons();
         }
@@ -220,19 +189,7 @@ public class Dabgues : MonoBehaviour
         CheckTagsAndHandle();
     }
 
-    private void ShowDialogue()
-    {
-        if (_currentStory.canContinue)
-        {
-            string nextLine = _currentStory.Continue();
-            _dialogueText.text = nextLine;
-
-            // Сохраняем состояние
-            SaveCurrentState(nextLine);
-        }
-
-        UpdateNameAndBackground();
-    }
+    
 
     private void ShowChoiceButtons()
     {
@@ -265,7 +222,6 @@ public class Dabgues : MonoBehaviour
                 btn.onClick.AddListener(() =>
                 {
                     // Сохраняем состояние перед выбором (с текущим текстом)
-                    SaveCurrentState(_dialogueText.text);
 
                     DisableAllChoiceButtons();
                     ChoiceButtonAction(index);
@@ -310,9 +266,8 @@ public class Dabgues : MonoBehaviour
     // Очистка истории при загрузке новой сцены
     void OnDestroy()
     {
-        _historyStates.Clear();
+        _historyIndex = -1;
         _historyTexts.Clear();
-        _currentHistoryIndex = -1;
     }
 }
 //using Ink.Runtime;
