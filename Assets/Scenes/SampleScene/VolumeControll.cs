@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class GlobalVolume : MonoBehaviour
 {
     public Slider slider;
-
+    public int volume;
     void Start()
     {
         // Устанавливаем начальное значение слайдера = текущая громкость
