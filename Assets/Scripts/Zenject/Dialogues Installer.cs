@@ -1,16 +1,25 @@
-using Ink.Runtime;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Zenject;
 
-public class DialoguesInstaller : MonoBehaviour
+public class DialoguesInstaller : MonoInstaller
 {
-    public TextAsset inkJson;
-    public GameObject dialoguePanel;
-    public TextMeshProUGUI dialogueText;
-    public TextMeshProUGUI nameText;
+    [SerializeField] public TextAsset inkJson;
+    [SerializeField] public GameObject dialoguePanel;
+    [SerializeField] public TextMeshProUGUI dialogueText;
+    [SerializeField] public TextMeshProUGUI nameText;
+    [SerializeField] public GameObject choiceButtonsPanel;
+    [SerializeField] public GameObject choiceButton;
+    [SerializeField] public GameObject backButton; // Добавьте это поле
 
-    public GameObject choiceButtonsPanel;
-    public GameObject choiceButton;
+    public override void InstallBindings()
+    {
+        Container.BindInstance(inkJson);
+        Container.BindInstance(dialoguePanel);
+        Container.BindInstance(dialogueText);
+        Container.BindInstance(nameText);
+        Container.BindInstance(choiceButtonsPanel);
+        Container.BindInstance(choiceButton);
+        Container.BindInstance(backButton); // И это
+    }
 }
